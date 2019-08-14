@@ -1,0 +1,17 @@
+#!/bin/sh
+
+rm -rf /tmp/upgrade
+if [ -z "$1" ]
+then
+        echo "Please input link,eg: upgrade your-urtl"
+        exit 2
+else
+        #download file
+        mkdir -p /tmp/upgrade
+        wget -P /tmp/upgrade $1
+        #/etc/init.d/liconspgsh stop
+        #rm /usr/licon/spg9
+        #chmod 777 /tmp/upgrade/spg9
+        #mv /tmp/upgrade/spg9 /usr/licon/spg9
+        #/etc/init.d/liconspgsh restart
+fi
